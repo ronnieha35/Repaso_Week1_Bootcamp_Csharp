@@ -62,7 +62,7 @@
                     
                     Console.Write("Ingrese el radio del Circulo: ");
                     double radio = Convert.ToDouble(Console.ReadLine());
-                    double areaCirculo = Math.PI * Math.Pow(radio, 2);
+                    double areaCirculo = 3.1416 * radio * radio;
                     Console.WriteLine("El area del circulo es: " + areaCirculo);
                     break;
 
