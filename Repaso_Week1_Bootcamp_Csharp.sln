@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repaso_Week1_Bootcamp_Csharp", "Repaso_Week1_Bootcamp_Csharp.csproj", "{B7082A5B-49CF-49A6-A51C-9FED84DF1C46}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhileLoop", "..\WhileLoop\WhileLoop.csproj", "{E9E637B9-F96A-4BA2-9672-39005D162FA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week2_Arrays_Uni", "..\Week2_Arrays_Uni\Week2_Arrays_Uni.csproj", "{766BDF2D-DA33-4DE6-B1D9-D027E6127463}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{E9E637B9-F96A-4BA2-9672-39005D162FA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9E637B9-F96A-4BA2-9672-39005D162FA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9E637B9-F96A-4BA2-9672-39005D162FA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{766BDF2D-DA33-4DE6-B1D9-D027E6127463}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{766BDF2D-DA33-4DE6-B1D9-D027E6127463}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{766BDF2D-DA33-4DE6-B1D9-D027E6127463}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{766BDF2D-DA33-4DE6-B1D9-D027E6127463}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

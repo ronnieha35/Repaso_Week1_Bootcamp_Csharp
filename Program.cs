@@ -83,6 +83,14 @@
 
             Console.WriteLine("======= Finalizacion de Validacion Area =========");
 
+
+            int[] notas = { 1, 2, 3, 4, 5, 6, 7};
+
+            foreach (var x in notas)
+            {
+                
+            }
+
         }
 
     }
