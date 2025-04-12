@@ -43,6 +43,37 @@
             }
 
             Console.WriteLine("Se acabó el programa");
+
+
+            //Contar Duplicados dentro de un arreglo
+            //int [] = new [44,44,32,65]
+
+            int[] arreglo = new int[] { 44, 44, 32, 35 };
+
+            Dictionary<int, int> contador = new Dictionary<int, int>();
+
+            // Contar ocurrencias
+            foreach (int numero in arreglo)
+            {
+                if (contador.ContainsKey(numero))
+                {
+                    contador[numero]++;
+                }
+                else
+                {
+                    contador[numero] = 1;
+                }
+            }
+
+            // Mostrar duplicados
+            Console.WriteLine("Elementos duplicados:");
+            foreach (var par in contador)
+            {
+                if (par.Value > 1)
+                {
+                    Console.WriteLine($"Número {par.Key} se repite {par.Value} veces.");
+                }
+            }
         }
     }
 }
