@@ -6,18 +6,21 @@
         static string[] nombres = { "Ronnie Alarcon", "Pedro Vargas", "Natalia Perez", "Luis Morales" };
         static string[] usuarios = { "ralarcon", "pvargas", "nperez", "lmorales" };
         static int[] pines = { 1234, 5678, 8989, 4321 };
-        static decimal[] saldos = { 30000m, 1250m, 5600m, 10200m };
+        static decimal[] saldos = { 30000m, 1200m, 5000m, 10000m };
 
         //Array de List para almacenar los movimientos
-        static List<string>[] movimientos = new List<string>[4]
+        static Dictionary<string, List<string>> movimientos = new Dictionary<string, List<string>>()
         {
-            new List<string>(), new List<string>(), new List<string>(), new List<string>()
+            { "ralarcon", new List<string>() },
+            { "pvargas", new List<string>() },
+            { "nperez", new List<string>() },
+            { "lmorales", new List<string>() }
         };
 
         static void Main(string[] args)
         {
-           while (true)
-           {
+            while (true)
+            {
                 int clienteActual = -1;
                 int intentos = 0;
 
@@ -48,7 +51,7 @@
                     {
                         intentos++;
                         Console.WriteLine("Credenciales incorrectas. Acceso denegado.");
-                        
+
                     }
 
                     if (intentos == 3)
@@ -126,8 +129,8 @@
                 }
 
                 Console.Clear();
-           }
-           
+            }
+
 
         }
 
@@ -301,13 +304,17 @@
         {
             Console.WriteLine("==== Últimos 10 Movimientos ====");
 
-            if (movimientos[clienteActual].Count == 0)
+            List<string> listaMovimientos = movimientos[usuarios[clienteActual]];
+
+            if (listaMovimientos.Count == 0)
             {
                 Console.WriteLine("No hay movimientos registrados.");
             }
             else
             {
-                foreach (var movimiento in movimientos[clienteActual])
+                Console.WriteLine("Mostrando los últimos movimientos:");
+
+                foreach (string movimiento in listaMovimientos)
                 {
                     Console.WriteLine(movimiento);
                 }
@@ -315,24 +322,28 @@
                 Console.WriteLine("");
                 Console.WriteLine($"Tu Saldo Actual es : S/ {saldos[clienteActual]:N2}");
             }
+
         }
         private static void RegistrarMovimiento(int clienteActual, string descripcion)
         {
+            string users = usuarios[clienteActual];
             string registro = $"{DateTime.Now:dd/MM/yyyy HH:mm} - {descripcion}";
-            movimientos[clienteActual].Insert(0, registro);
 
-            if (movimientos[clienteActual].Count > 10)
+            movimientos[users].Add(registro);
+
+            if (movimientos[users].Count > 10)
             {
-                movimientos[clienteActual].RemoveAt(10);
+                movimientos[users].RemoveAt(10);
             }
+
         }
 
-        
 
-        
 
-        
 
-        
+
+
+
+
     }
 }
